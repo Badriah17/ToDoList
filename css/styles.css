@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Work Sans", sans-serif;
+  background-color: #def7df;
+}
+#header {
+  font-size: 3rem;
+  text-align: center;
+  min-height: 25vh;
+  color: #325b34;
+}
+#title {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  letter-spacing: 0.2rem;
+}
+form {
+  display: flex;
+  font-size: 1.7rem;
+  justify-content: center;
+  margin: 15px 0;
+  padding: 0.8rem;
+  width: 100%;
+}
+form input {
+  background-color: white;
+  color: #325b34;
+  padding: 10px;
+  font-size: 17px;
+  border: none;
+  outline: none;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
+  max-width: 500px;
+  width: 100%;
+}
+button {
+  outline: none;
+  border: none;
+  background-color: #d3c654;
+  color: #325b34;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #beb34b;
+}
+form button {
+  padding: 10px;
+  font-size: 17px;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
+  min-width: 100px;
+}
+
+#ordList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1200px; */
+}
+.todo-list {
+  min-width: 25%;
+  list-style: none;
+}
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 19px;
+  margin: 1rem;
+  padding: 0.25em 0.5em;
+  background-color: white;
+  border-radius: 30px;
+}
+.todo li {
+  padding: 7px;
+  font-size: 20px;
+  flex: 1;
+  overflow-wrap: anywhere;
+  border-radius: 30px;
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+.check-btn,
+.delete-btn {
+  width: 2em;
+  height: 2em;
+  font-size: 19px;
+  border-radius: 80%;
+  margin: 0 5px;
+}
+i {
+  pointer-events: none;
+}
+.completed {
+  transition: 0.2s;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fall {
+  transition: 0.5s;
+  transform: translateY(45rem) rotateZ(45deg);
+  opacity: 0;
+}
+@media (max-width: 800px) {
+  #header {
+    font-size: 2rem;
+    align-items: center;
+  }
+  #title {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  #header {
+    font-size: 1.5rem;
+  }
+  #title {
+    max-width: 550px;
+  }
+  form {
+    align-items: center;
+    flex-direction: column;
+  }
+  form input {
+    border-radius: 17px;
+  }
+  form button {
+    width: 50%;
+    border-radius: 15px;
+    margin-top: 15px;
+  }
+}
